@@ -3,7 +3,7 @@ localStorage.clear()
 const employees = [
   {
     "id": 1,
-    "email": "employee1@example.com",
+    "email": "emp1@ttm.com",
     "password": "1234",
     "name": "Chris Hemsworth",
     "tasks": [
@@ -57,7 +57,7 @@ const employees = [
   },
   {
     "id": 2,
-    "email": "employee2@example.com",
+    "email": "emp2@ttm.com",
     "password": "1234",
     "name": "Paul Rudd",
     "tasks": [
@@ -121,7 +121,7 @@ const employees = [
   },
   {
     "id": 3,
-    "email": "employee3@example.com",
+    "email": "emp3@ttm.com",
     "password": "1234",
     "name": "Margot Robbie",
     "tasks": [
@@ -195,7 +195,7 @@ const employees = [
   },
   {
     "id": 4,
-    "email": "employee4@example.com",
+    "email": "emp4@ttm.com",
     "password": "1234",
     "name": "Timothée Chalamet",
     "tasks": [
@@ -259,7 +259,7 @@ const employees = [
   },
   {
     "id": 5,
-    "email": "employee5@example.com",
+    "email": "emp5@ttm.com",
     "password": "1234",
     "name": "Florence Pugh",
     "tasks": [
@@ -337,8 +337,8 @@ const employees = [
 const admin = [
     {
       "id": 1,
-      "email": "admin@example.com",
-      "password": "1234"
+      "email": "admin@ttm.com",
+      "password": "admin"
     }
   ];
   
