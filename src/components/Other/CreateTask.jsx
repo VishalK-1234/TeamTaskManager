@@ -104,7 +104,7 @@ const CreateTask = () => {
                 required
                 className="text-sm text-white py-1 px-2 w-4/5 rounded outline-none border-[1px] border-gray-400 mb-4"
                 type="text"
-                placeholder="Make a UI design"
+                placeholder="Attend fan meet-up"
               />
             </div>
             <div>
@@ -142,7 +142,7 @@ const CreateTask = () => {
                 required
                 className="text-sm text-white  py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px] border-gray-400 mb-4"
                 type="text"
-                placeholder="design, dev, etc"
+                placeholder="promotional, shoot, etc"
               />
             </div>
           </div>
