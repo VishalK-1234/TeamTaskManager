@@ -63,7 +63,7 @@ const App = () => {
   }, []);
 
   const handleLogin = (email, password) => {
-    if (email === "admin@ttm.com" && password === "admin_ttm") {
+    if (email === "admin@ttm.com" && password === "admin") {
       const adminData = { role: "admin" };
       setuser("admin");
       localStorage.setItem("loggedInUser", JSON.stringify(adminData));
