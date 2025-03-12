@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* ✅ General scrollbar styling for both sections */
+#tasklist::-webkit-scrollbar,
+#alltask::-webkit-scrollbar {
+    width: 6px; /* Thin scrollbar */
+    height: 6px; /* Thin horizontal scrollbar (if applicable) */
+}
+
+#tasklist::-webkit-scrollbar-track,
+#alltask::-webkit-scrollbar-track {
+    background: transparent; /* Makes track blend with the UI */
+}
+
+#tasklist::-webkit-scrollbar-thumb,
+#alltask::-webkit-scrollbar-thumb {
+    background: #666; /* Dark gray scrollbar */
+    border-radius: 10px;
+}
+
+#tasklist::-webkit-scrollbar-thumb:hover,
+#alltask::-webkit-scrollbar-thumb:hover {
+    background: #444; /* Slightly darker on hover */
+}
+
+/* ✅ FIX for Layout Shift (Keeps Content Aligned) */
+#tasklist,
+#alltask {
+    scrollbar-width: thin; /* Works for Firefox */
+    scrollbar-color: #666 transparent;
+    overflow: overlay; /* Prevents scrollbar from shifting layout (Chrome) */
+}
+
+/* ✅ Extra Padding for Cross-Browser Fix */
+@supports not (overflow: overlay) {
+    #tasklist,
+    #alltask {
+        padding-right: 6px; /* Ensures content doesn’t shift */
+    }
+}
