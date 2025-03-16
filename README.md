@@ -46,7 +46,7 @@ A modern web application for managing tasks within a team. This system allows ad
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/team-task-manager.git
+   git clone https://github.com/VishalK-1234/TeamTaskManager
    cd team-task-manager
    ```
 
@@ -61,6 +61,10 @@ A modern web application for managing tasks within a team. This system allows ad
    ```
 
 4. Open your browser and navigate to `http://localhost:5173`
+
+### Display Compatibility
+
+#### Note: This application is not fully responsive. For the best experience, please use Google Chrome at 100% zoom on a standard desktop or laptop screen.
 
 ## Usage
 
