@@ -134,7 +134,7 @@ The application uses **React Context API** for state management, with persistent
 
 ## Demo
 
-![GenieMind Demo](demo.gif)
+![TeamTaskManager](demo.gif)
 
 ## Contributors
 - **Vishal K** - Creator & Developer
