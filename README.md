@@ -127,3 +127,14 @@ The application uses **React Context API** for state management, with persistent
 - Persistent state between sessions
 - Efficient data synchronization
 - Role-based access control
+
+## Demo
+
+![GenieMind Demo](demo.gif)
+
+## Contributors
+- **Vishal K** - Creator & Developer
+
+## Feedback
+
+If you have any feedback, please reach me out at vishalk16801680@gmail.com
