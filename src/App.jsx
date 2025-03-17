@@ -81,10 +81,34 @@ const App = () => {
         // Dispatch a storage event to notify other components
         window.dispatchEvent(new Event('storage'));
       } else {
-        alert("Invalid Credentials Entered");
+        alert(
+          "Invalid Credentials Entered!\n\n" +
+          "Use the following credentials:\n" +
+          "Admin Access:\n" +
+          "   Email: admin@ttm.com\n" +
+          "   Password: admin\n\n" +
+          "Employee Access:\n" +
+          "   Email: emp1@ttm.com\n" +
+          "   Password: 1234\n\n" +
+          "For more credentials, visit:\n" +
+          "https://github.com/VishalK-1234/TeamTaskManager"
+        );
+        
       }
     } else {
-      alert("Invalid Credentials Entered");
+      alert(
+        "Invalid Credentials Entered!\n\n" +
+        "Use the following credentials:\n" +
+        "Admin Access:\n" +
+        "   Email: admin@ttm.com\n" +
+        "   Password: admin\n\n" +
+        "Employee Access:\n" +
+        "   Email: emp1@ttm.com\n" +
+        "   Password: 1234\n\n" +
+        "For more credentials, visit:\n" +
+        "https://github.com/VishalK-1234/TeamTaskManager"
+      );
+      
     }
   };
 
