@@ -134,6 +134,8 @@ The application uses **React Context API** for state management, with persistent
 
 ## Demo
 
+### Live Demo: https://team-taskmanager.netlify.app/
+
 ![TeamTaskManager](demo.gif)
 
 ## Contributors
