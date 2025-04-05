@@ -9,14 +9,14 @@ const TaskList = ({data}) => {
   const [userData, setUserData] = useContext(AuthContext);
   const [tasks, setTasks] = useState([]);
 
-  // Update tasks whenever data changes
+
   useEffect(() => {
     if (data && data.tasks) {
       setTasks([...data.tasks]);
     }
   }, [data, userData]);
 
-  // Force re-render when localStorage changes (for task updates)
+
   useEffect(() => {
     const handleStorageChange = () => {
       const loggedInUser = localStorage.getItem("loggedInUser");

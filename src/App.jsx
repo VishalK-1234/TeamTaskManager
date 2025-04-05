@@ -6,7 +6,7 @@ import { getLocalStorage, setLocalStorage } from "./utils/localstorage";
 import AuthProvider, { AuthContext } from "./context/AuthProvider";
 
 const App = () => {
-  // Initialize user state from localStorage
+
   const [user, setuser] = useState(() => {
     const loggedInUser = localStorage.getItem("loggedInUser");
     if (loggedInUser && loggedInUser !== "") {
@@ -21,7 +21,7 @@ const App = () => {
     return null;
   });
   
-  // Initialize user data from localStorage
+
   const [LoggedInUserData, setLoggedInUserData] = useState(() => {
     const loggedInUser = localStorage.getItem("loggedInUser");
     if (loggedInUser && loggedInUser !== "") {
@@ -38,7 +38,7 @@ const App = () => {
 
   const [userData, SetUserData] = useContext(AuthContext);
 
-  // Listen for storage events to update the login state
+
   useEffect(() => {
     const handleStorageChange = () => {
       const loggedInUser = localStorage.getItem("loggedInUser");
@@ -67,7 +67,7 @@ const App = () => {
       const adminData = { role: "admin" };
       setuser("admin");
       localStorage.setItem("loggedInUser", JSON.stringify(adminData));
-      // Dispatch a storage event to notify other components
+      
       window.dispatchEvent(new Event('storage'));
     } else if (userData) {
       const employee = userData.find(
@@ -78,7 +78,7 @@ const App = () => {
         setuser("employees");
         setLoggedInUserData(employee);
         localStorage.setItem("loggedInUser", JSON.stringify(employeeData));
-        // Dispatch a storage event to notify other components
+        
         window.dispatchEvent(new Event('storage'));
       } else {
         alert(

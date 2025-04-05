@@ -5,14 +5,12 @@ const AllTask = () => {
   const [userData, setUserData] = useContext(AuthContext);
   const [employeeData, setEmployeeData] = useState([]);
 
-  // Update local state when userData changes
   useEffect(() => {
     if (userData) {
       setEmployeeData([...userData]);
     }
   }, [userData]);
 
-  // Listen for storage events to update the UI
   useEffect(() => {
     const handleStorageChange = () => {
       const { employees } = JSON.parse(localStorage.getItem("employees")) || { employees: [] };

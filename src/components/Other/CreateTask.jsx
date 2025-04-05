@@ -13,16 +13,14 @@ const CreateTask = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    
-    // Clear previous error
+
     setError("");
     
     if (!userData) {
       setError("User data not loaded. Please refresh the page.");
       return;
     }
-    
-    // Create the task object with consistent property names
+ 
     const newTask = {
       task_title: taskTitle,
       task_description: taskDescription,
@@ -34,7 +32,7 @@ const CreateTask = () => {
       completed: false,
     };
 
-    // Check if employee exists
+
     const employeeExists = userData.some(emp => emp.name === assignTo);
     
     if (!employeeExists) {
@@ -42,19 +40,19 @@ const CreateTask = () => {
       return;
     }
 
-    // Create a new copy of userData to avoid direct state mutation
+
     const updatedUserData = userData.map(employee => {
       if (employee.name === assignTo) {
-        // Create new task array with the new task
+      
         const updatedTasks = [...employee.tasks, newTask];
         
-        // Create new taskCounts with incremented newTask count
+      
         const updatedTaskCounts = {
           ...employee.taskCounts,
           newTask: employee.taskCounts.newTask + 1
         };
         
-        // Return updated employee object
+    
         return {
           ...employee,
           tasks: updatedTasks,
@@ -64,14 +62,11 @@ const CreateTask = () => {
       return employee;
     });
 
-    // Update state - this will trigger the useEffect in AuthProvider
-    // which will update localStorage
+
     setUserData(updatedUserData);
     
-    // Dispatch a storage event to notify other components
     window.dispatchEvent(new Event('storage'));
 
-    // Reset form fields
     setTaskTitle("");
     setCategory("");
     setAssignTo("");

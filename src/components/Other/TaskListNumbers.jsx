@@ -10,14 +10,12 @@ const TaskListNumbers = ({data}) => {
     failed: 0
   });
 
-  // Update task counts when data changes
   useEffect(() => {
     if (data && data.taskCounts) {
       setTaskCounts({...data.taskCounts});
     }
   }, [data, userData]);
 
-  // Listen for storage events to update the UI
   useEffect(() => {
     const handleStorageChange = () => {
       const loggedInUser = localStorage.getItem("loggedInUser");

@@ -7,21 +7,20 @@ const AcceptTask = ({data}) => {
   const handleTaskCompletion = (isSuccessful) => {
     if (!userData) return;
     
-    // Create a new copy of userData
     const updatedUserData = userData.map(employee => {
-      // Find the employee who has this task
+
       const taskIndex = employee.tasks.findIndex(task => 
         task.task_title === data.task_title && 
         task.task_description === data.task_description &&
         task.active === true
       );
 
-      // If this employee has the task
+  
       if (taskIndex !== -1) {
-        // Create a copy of the tasks array
+    
         const updatedTasks = [...employee.tasks];
         
-        // Update the task status based on success or failure
+     
         updatedTasks[taskIndex] = {
           ...updatedTasks[taskIndex],
           active: false,
@@ -29,7 +28,7 @@ const AcceptTask = ({data}) => {
           failed: !isSuccessful
         };
         
-        // Update task counts
+
         const updatedTaskCounts = {
           ...employee.taskCounts,
           active: employee.taskCounts.active - 1,
@@ -37,7 +36,7 @@ const AcceptTask = ({data}) => {
           failed: !isSuccessful ? employee.taskCounts.failed + 1 : employee.taskCounts.failed
         };
         
-        // Return updated employee
+  
         return {
           ...employee,
           tasks: updatedTasks,
@@ -48,11 +47,10 @@ const AcceptTask = ({data}) => {
       return employee;
     });
     
-    // Update state - this will trigger the useEffect in AuthProvider
-    // which will update localStorage and the loggedInUser data
+
     setUserData(updatedUserData);
     
-    // Dispatch a storage event to notify other components
+
     window.dispatchEvent(new Event('storage'));
   };
 
